@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="665.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <top>
+      <VBox prefHeight="65.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#onSave" text="Save" />
+                        <MenuItem mnemonicParsing="false" onAction="#onExit" text="Exit" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <ToolBar prefHeight="47.0" prefWidth="600.0">
+               <items>
+                  <HBox prefHeight="30.0" prefWidth="587.2" spacing="20.0">
+                     <children>
+                        <ColorPicker fx:id="colorPicker" prefHeight="42.0" prefWidth="125.0" />
+                        <CheckBox fx:id="eraser" mnemonicParsing="false" prefHeight="34.0" prefWidth="74.0" text="Eraser" />
+                        <Slider fx:id="brushSize" blockIncrement="1.0" prefHeight="30.0" prefWidth="266.0" showTickLabels="true" />
+                        <Label prefHeight="36.0" prefWidth="47.0" text="Pen Size" />
+                     </children>
+                  </HBox>
+               </items>
+            </ToolBar>
+         </children>
+      </VBox>
+   </top>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+   <center>
+      <Canvas fx:id="canvas" height="600.0" width="600.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
